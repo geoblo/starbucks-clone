@@ -24,10 +24,19 @@ a {
   position: relative;
 }
 
+img {
+  /* 이미지가 인라인 요소라서 발생하는 문자 기준선(Baseline) 아래의 공간을 제거하기 위해 */
+  display: block;
+}
+
 /* HEADER */
 header {
   background-color: #f6f5f0;
   border-bottom: 1px solid #c8c8c8;
+  width: 100%; /* 가로 너비를 지정하지 않으면 최소한으로 줄어드려고 함 */
+  position: fixed;
+  top: 0;
+  z-index: 9;
 }
 header > .inner {
   /* background-color: orange; */
@@ -177,3 +186,23 @@ header .main-menu .item .item__contents > ul > li ul li:hover {
   color: #669900;
 }
 
+/* 전역 배지(고정 배너) */
+header .badges {
+  position: fixed;
+  top: 132px;
+  right: 12px;
+
+  /* position: absolute;
+  top: 132px;
+  right: 12px; */
+
+  /* transition: 0.6s; */
+}
+header .badges .badge {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  /* x축거리, y축거리, 흐림 처리(blur) 범위, 확대/축소(spread) 범위, 색상 */
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
