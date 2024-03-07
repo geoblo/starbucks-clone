@@ -42,8 +42,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
 
+  <!-- SWIPER CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
   <!-- main.css -->
   <link rel="stylesheet" href="css/main.css">
+
+  <!-- SWIPER JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
   <!-- GSAP -->
   <!-- 순서 주의(main.js에서 사용하니까 더 앞에) -->
@@ -376,7 +382,20 @@
         <h2>공지사항</h2>
         <!-- div.swiper: 공지사항이 슬라이드 될 영역, 슬라이드 라이브러리 사용! -->
         <div class="swiper">
-
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">크리스마스 & 연말연시 스타벅스 매장 영업시간 변경 안내</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">[당첨자 발표] 스타벅스 플래너 영수증 이벤트</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">스타벅스 애플리케이션 버전 업데이트 안내</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">[당첨자 발표] 뉴이어 전자영수증 이벤트</a>
+            </div>
+          </div>
         </div>
         <a href="javascript:void(0)" class="notice-more">
           <span class="material-icons">add_circle</span>
