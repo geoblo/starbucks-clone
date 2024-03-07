@@ -57,3 +57,16 @@ window.addEventListener('scroll', function () {
     });
   }
 });
+
+// 순차적으로 VISUAL 섹션 내 요소 보이기
+// 나타날 요소(.fade-in)들을 찾기
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+console.log(fadeEls);
+fadeEls.forEach(function (fadeEl, index) {
+  console.log(index);
+  // gsap.to(요소, 지속시간, 옵션: {});
+  gsap.to(fadeEl, 1, {
+    opacity: 1,
+    delay: (index + 1) * 0.7 // 0.7, 1.4, 2.1, 2.8
+  });
+});

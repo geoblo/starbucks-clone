@@ -7,6 +7,7 @@ body {
   line-height: 1.4;
   color: #333;
   /* 위 속성들은 모두 상속되기에 전체 스타일을 한번에 제어 */
+  overflow-x: hidden;
 }
 
 a {
@@ -308,4 +309,8 @@ header .badges .badge {
   position: absolute;
   bottom: 0;
   left: 275px;
+}
+.visual .fade-in {
+  /* 투명한 상태에서 시작되도록 세팅 */
+  opacity: 0;
 }
