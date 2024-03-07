@@ -70,3 +70,15 @@ fadeEls.forEach(function (fadeEl, index) {
     delay: (index + 1) * 0.7 // 0.7, 1.4, 2.1, 2.8
   });
 });
+
+// 공지사항 수직 슬라이드 기능
+// new 키워드로 Swiper 객체를 생성 => 슬라이드 기능을 생성
+// new Swiper(요소, 옵션: {});
+// 첫번째 인수: 슬라이드 기능을 적용할 요소의 선택자
+// 두번째 인수: 다양한 옵션을 객체 데이터로 전달(API 페이지 참고)
+new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'vertical', // 수직 슬라이드
+  loop: true, // 반복 재생 여부, 1 -> 2 -> 3 -> 4 -> 다시 1
+  autoplay: true // 자동 재생 여부
+});

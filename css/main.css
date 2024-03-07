@@ -45,6 +45,9 @@ img {
   cursor: pointer;
   display: block; /* a, span 같은 인라인 요소를 버튼으로 사용할 수도 있으니 블록으로 지정 */
   transition: 0.4s;
+
+  /* (참고) 커서 모양 커스텀 */
+  cursor: url("https://blog.kakaocdn.net/dn/BQXpN/btq3qNR67Lg/8tx8tGzkOcr5BuX5dyIaKk/img.png") 58 58, auto;
 }
 .btn:hover {
   background-color: #333;
@@ -359,6 +362,13 @@ header .badges .badge {
   /* background-color: orange; */
   height: 62px;
   flex-grow: 1; /* 최대한 늘어나도록 지정, flex: 1; 을 써도 같은 결과 */
+}
+.notice .inner__left .swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+}
+.notice .inner__left .swiper .swiper-slide a {
+  color: #fff;
 }
 .notice .inner__left .notice-more {
   width: 62px;
