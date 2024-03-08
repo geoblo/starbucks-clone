@@ -398,6 +398,24 @@ header .badges .badge {
   /* width: 30%; */
   /* 방법2. flex를 사용하여 비율 나누기 */
   flex: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.notice .inner__right h2 {
+  font-size: 17px;
+  font-weight: 700;
+}
+.notice .inner__right .toggle-promotion {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.notice .inner__right .toggle-promotion .material-icons {
+  font-size: 30px;
 }
 
 /* PROMOTION */
@@ -415,4 +433,71 @@ header .badges .badge {
   height: 553px;
   /* Flex Item인 .swiper가 2477px을 유지하기 위해 감소 너비 비율을 0으로 */
   flex-shrink: 0;
+}
+.promotion .swiper-slide {
+  /* 모든 슬라이드를 반투명하게, active 한 것만 불투명하게 */
+  opacity: 0.5;
+  transition: opacity 1s;
+  position: relative;
+}
+.promotion .swiper-slide-active {
+  opacity: 1;
+}
+.promotion .swiper-slide .btn {
+  position: absolute;
+  bottom: 0;
+  /* Quiz: absolute 요소의 수평 가운데 배치 */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.promotion .swiper-pagination {
+  position: absolute;
+  bottom: 40px;
+  /* 헤더의 z-index가 9이기 때문에 1로 덮어씌움 
+    아니면 헤더를 10보다 크게 해도 됨 */
+  z-index: 1;
+}
+.promotion .swiper-pagination .swiper-pagination-bullet {
+  /* 기존 배경색은 투명하게 숨기고, 배경 이미지를 사용 */
+  background-color: transparent;
+  background-image: url("../images/promotion_slide_pager.png");
+  width: 13px;
+  height: 12px;
+}
+.promotion .swiper-pagination .swiper-pagination-bullet-active {
+  background-image: url("../images/promotion_slide_pager_on.png");
+}
+
+/* 다중 선택으로 공통 스타일 지정 */
+.promotion .swiper-button-prev,
+.promotion .swiper-button-next {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 300px;
+  z-index: 1;
+  color: #333;
+  transition: 0.4s;
+}
+.promotion .swiper-button-prev {
+  /* 가운데로 몰아넣고 마진으로 위치 조정 */
+  left: 50%;
+  margin-left: -480px;
+}
+.promotion .swiper-button-next {
+  /* 가운데로 몰아넣고 마진으로 위치 조정 */
+  right: 50%;
+  margin-right: -480px;
+}
+.promotion .swiper-button-prev:hover,
+.promotion .swiper-button-next:hover {
+  background-color: #333;
+  color: #fff;
+}
+.promotion .swiper-button-prev::after,
+.promotion .swiper-button-next::after {
+  display: none;
 }
