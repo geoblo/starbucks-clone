@@ -107,9 +107,44 @@ new Swiper('.promotion .swiper', {
 // 프로모션 섹션 토글 기능
 const promotionEl = document.querySelector('.promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion');
-const promotionToggleIcon = promotionToggleEl.querySelector('.material-icons');
+const promotionToggleIcon = promotionToggleBtn.querySelector('.material-icons');
 
 // Quiz
 // 토글 버튼을 클릭했을 때 아래 기능을 실행
 // 프로모션 요소에 'hide'라는 클래스 값이 있으면 보임 처리!('hide' 클래스를 제거하고 아이콘 모양을 'upload'로 설정)
 // 그렇지 않으면 숨김 처리!('hide' 클래스를 추가하고 아이콘 모양을 'download'로 설정)
+promotionToggleBtn.addEventListener('click', function () {
+  if (promotionEl.classList.contains('hide')) {
+    promotionEl.classList.remove('hide');
+    promotionToggleIcon.textContent = 'upload';
+  } else {
+    promotionEl.classList.add('hide');
+    promotionToggleIcon.textContent = 'download';
+  }
+});
+
+// 유튜브 섹션 위에 부유 요소 애니메이션 처리
+// gsap.to(요소, 지속시간, 옵션: {})
+// 옵션 참고: https://greensock.com/docs/v3/GSAP/gsap.to()
+gsap.to('.floating1', 1.5, {
+  delay: 1, // 얼마나 늦게 애니메이션을 시작할 것인지 지연 시간을 설정
+  y: 15, // 수직으로 얼마나 움직일지 설정, transform: translateY(수치); 와 같음
+  repeat: -1, // 몇 번 반복할지 설정, -1은 무한 반복
+  yoyo: true, // 한 번 재생된 애니메이션을 다시 뒤로 재생
+  ease: Power1.easeInOut // 타이밍 함수 적용, 느리게-빠르게-느리게
+});
+// 지속시간, delay, y를 자유롭게 변경하여 적용하기
+gsap.to('.floating2', 2, {
+  delay: 0.5,
+  y: 15,
+  repeat: -1,
+  yoyo: true,
+  ease: Power1.easeInOut
+});
+gsap.to('.floating3', 2.5, {
+  delay: 1.5,
+  y: 20,
+  repeat: -1,
+  yoyo: true,
+  ease: Power1.easeInOut
+});
