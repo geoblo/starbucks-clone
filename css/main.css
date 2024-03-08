@@ -399,3 +399,20 @@ header .badges .badge {
   /* 방법2. flex를 사용하여 비율 나누기 */
   flex: 3;
 }
+
+/* PROMOTION */
+.promotion {
+  height: 663px;
+  background-color: #f6f5ef;
+  display: flex;
+  justify-content: center; /* 슬라이드 수평 가운데 정렬 */
+  position: relative; /* 페이지네이션 요소 배치를 위해 */
+}
+.promotion .swiper {
+  /* 이미지(819px) 슬라이드 3개 + 사이 여백(10px) 2개 = 2477px */
+  width: calc(819px * 3 + 10px * 2);
+  /* 활용 예시: width: calc(100% - 120px); */
+  height: 553px;
+  /* Flex Item인 .swiper가 2477px을 유지하기 위해 감소 너비 비율을 0으로 */
+  flex-shrink: 0;
+}

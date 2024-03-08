@@ -76,9 +76,22 @@ fadeEls.forEach(function (fadeEl, index) {
 // new Swiper(요소, 옵션: {});
 // 첫번째 인수: 슬라이드 기능을 적용할 요소의 선택자
 // 두번째 인수: 다양한 옵션을 객체 데이터로 전달(API 페이지 참고)
-new Swiper('.swiper', {
+new Swiper('.notice .swiper', {
   // Optional parameters
   direction: 'vertical', // 수직 슬라이드
   loop: true, // 반복 재생 여부, 1 -> 2 -> 3 -> 4 -> 다시 1
   autoplay: true // 자동 재생 여부
+});
+
+// 프로모션 수평 슬라이드 기능
+new Swiper('.promotion .swiper', {
+  // Optional parameters
+  direction: 'horizontal', // 수평 슬라이드(기본값)
+  loop: true, // 반복 재생 여부, 1 -> 2 -> 3 -> 4 -> 다시 1
+  autoplay: { // 자동 재생 여부
+    delay: 5000 // 5초마다 슬라이드 바뀜(기본값: 3000)
+  },
+  slidesPerView: 3, // 한 번에 보여줄 슬라이드 개수(기본값: 1)
+  spaceBetween: 10, // 슬라이드 사이 여백(간격) px
+  centeredSlides: true, // 1번 슬라이드가 가운데 보이기
 });
