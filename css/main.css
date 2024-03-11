@@ -846,3 +846,54 @@ header .badges .badge {
 .find-store .text-group .description {
   margin-bottom: 20px;
 }
+
+/* AWARDS */
+.awards {
+  background-color: #272727;
+}
+.awards .inner {
+  padding: 40px 0;
+}
+.awards .swiper {
+  width: 100%;
+  height: 40px;
+}
+.awards .swiper-button-prev,
+.awards .swiper-button-next {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  opacity: 0.3;
+  position: absolute;
+  transition: 0.4s;
+}
+.awards .swiper-button-prev {
+  left: -100px;
+}
+.awards .swiper-button-next {
+  right: -100px;
+}
+.awards .swiper-button-prev:hover,
+.awards .swiper-button-next:hover {
+  background-color: #fff;
+  color: #333;
+}
+.awards .swiper-button-prev::after,
+.awards .swiper-button-next::after {
+  display: none;
+}
+
+/* FOOTER */
+footer {
+  background-color: #272727;
+  border-top: 1px solid #333;
+}
+footer .inner {
+  padding: 40px 0 60px;
+}
+footer .menu {
+  display: flex;
+  justify-content: center;
+}
